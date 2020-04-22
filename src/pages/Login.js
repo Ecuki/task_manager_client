@@ -9,7 +9,7 @@ import {
   Label,
   Segment,
   Message,
-  Divider
+  Divider,
 } from "semantic-ui-react";
 
 import { LOGIN_USER } from "../utils/graphql";
@@ -17,11 +17,11 @@ import { AuthContext } from "../context/auth";
 
 const initialCredentials = {
   username: "",
-  password: ""
+  password: "",
 };
 const initialErrors = {
   username: null,
-  password: null
+  password: null,
 };
 
 function Login(props) {
@@ -35,7 +35,7 @@ function Login(props) {
     update(
       _,
       {
-        data: { login: userData }
+        data: { login: userData },
       }
     ) {
       console.log(userData);
@@ -48,8 +48,8 @@ function Login(props) {
     },
     variables: {
       username,
-      password
-    }
+      password,
+    },
   });
 
   function handleChange(e, result) {
@@ -89,7 +89,7 @@ function Login(props) {
               iconPosition="left"
               name="username"
               onChange={handleChange}
-              placeholder="Username"
+              placeholder="demo"
               value={username}
             />
 
@@ -100,7 +100,7 @@ function Login(props) {
               iconPosition="left"
               name="password"
               onChange={handleChange}
-              placeholder="Password"
+              placeholder="demo"
               type="password"
               value={password}
             />
