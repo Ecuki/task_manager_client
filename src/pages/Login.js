@@ -16,8 +16,8 @@ import { LOGIN_USER } from "../utils/graphql";
 import { AuthContext } from "../context/auth";
 
 const initialCredentials = {
-  username: "",
-  password: "",
+  username: "demo",
+  password: "demo",
 };
 const initialErrors = {
   username: null,
@@ -89,7 +89,7 @@ function Login(props) {
               iconPosition="left"
               name="username"
               onChange={handleChange}
-              placeholder="demo"
+              placeholder="username"
               value={username}
             />
 
@@ -100,7 +100,7 @@ function Login(props) {
               iconPosition="left"
               name="password"
               onChange={handleChange}
-              placeholder="demo"
+              placeholder="password"
               type="password"
               value={password}
             />

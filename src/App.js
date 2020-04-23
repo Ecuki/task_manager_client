@@ -18,7 +18,7 @@ function App() {
       <Router>
         <Container style={{ height: "100vh" }}>
           <MenuBar />
-          <Route exact path="/" component={Home} />
+          <AuthRoute exact path="/" component={Home} />
           <NoAuthRoute exact path="/login" component={Login} />
           <NoAuthRoute exact path="/register" component={Register} />
           <AuthRoute exact path="/user/:userId" component={Profile} />
